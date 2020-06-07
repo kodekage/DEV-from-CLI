@@ -15,10 +15,10 @@ end
 
 class OhMyDev
   def welcome_message
-    puts 'Welcome to OH-MY-DEV 🎉🎉'
+    puts 'Welcome to DEV-from-CLI 🎉🎉'
     puts ''
     puts <<~ABOUT_OH_MY_DEV
-      OH-MY-DEV is a command line tool that allows you interact with Dev.to platform
+      DEV-from-CLI is a command line tool that allows you interact with Dev.to platform
     ABOUT_OH_MY_DEV
 
     puts "\n[1] View the latest articles on DEV.to\n[2] View articles using tags\n[3] Create article draft"
@@ -56,7 +56,7 @@ class OhMyDev
       possible_input = %w[Y y]
       next if possible_input.include? input
 
-      puts "\nSee you next time :)"
+      puts "\nSee you next time 😎😎"
       break
     end
   end
