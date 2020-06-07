@@ -32,4 +32,4 @@ What do you think? Awesome! right?
 - Turn project into a gem that's downloadable via `$ gem install dev-from-cli`
 
 #### Contributing
-Do you have any ideas or feature integrations ordiscovered bugs? You're welcome to drop push a PR
+Do you have any ideas or feature integrations or discovered bugs? You're welcome to send in a PR
