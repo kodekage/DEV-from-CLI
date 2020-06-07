@@ -5,6 +5,11 @@ DEV-from-CLI is a command line tool that allows users interact with Dev.to
 platform from the terminal.
 
 > This project was inspired by [Oh-My-DEV](https://github.com/OPARA-PROSPER/0.0.1-Oh-My-Dev) an Oh-My-Zsh plugin
+
+## DEMO
+
+[!Live Demo](https://www.youtube.com/watch?v=5Yj0VN5IdLw&t=128s)
+
 #### TESTING LOCALLY
 
 To be able to use this you need the following prerequisite
