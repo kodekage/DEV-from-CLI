@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.7.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv!
+
+BUNDLED WITH
+   2.1.2
