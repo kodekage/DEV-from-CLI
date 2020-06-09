@@ -85,23 +85,13 @@ class DevFromCli
   # a http POST request to the articles endpoint
   # @return String
   def create_post_draft
-    puts ''
-    puts "Follow the prompt to create an article\n"
-    print 'Enter title for your article> '
+    print "\nFollow the prompt to create an article\nEnter title for your article> "
     title = STDIN.gets.chomp
     print 'Enter tags> '
     tag1 = STDIN.gets.chomp
     print 'Enter draft content> '
     content = STDIN.gets.chomp
-
-    body = {
-      article: {
-        title: title,
-        published: false,
-        body_markdown: content,
-        tags: [tag1]
-      }
-    }
+    body = { article: { title: title, published: false, body_markdown: content, tags: [tag1] } }
 
     uri = URI.parse('https://dev.to/api/articles')
     http = Net::HTTP.new(uri.host, uri.port)
