@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'devfromcli'
+
+gem_instance = DevFromCli.new
+
+gem_instance.introduction if ARGV.first == 'start'
+gem_instance.introduction if ARGV.length == 0
+gem_instance.help if ARGV.first == 'help'

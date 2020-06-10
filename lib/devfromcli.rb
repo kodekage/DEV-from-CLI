@@ -48,6 +48,23 @@ class DevFromCli
     response_output user_tag if user_tag
   end
 
+  def help
+    puts ''
+    puts <<~HELP_INFO
+      devfromcli [version 0.1.0]
+      
+      Usage: devfromcli <command>
+      
+      Where <command> is either start or help
+      
+      devfromcli start    opens the interactive prompt
+      devfromcli help     displays this help
+
+      If you have any issue, discover a bug please open a ticket on github:
+      https://github.com/OPARA-PROSPER/DEV-from-CLI/issues/new
+    HELP_INFO
+  end
+
   private
   ##
   # Sends http GET request to the Dev.to backend API
@@ -85,7 +102,9 @@ class DevFromCli
   # a http POST request to the articles endpoint
   # @return String
   def create_post_draft
-    print "\nFollow the prompt to create an article\nEnter title for your article> "
+    print "\nFollow the prompt to create an article\nEnter your Dev.to API key> "
+    api_key=STDIN.gets.chomp
+    print 'Enter article Title> '
     title = STDIN.gets.chomp
     print 'Enter tags> '
     tag1 = STDIN.gets.chomp
@@ -97,7 +116,7 @@ class DevFromCli
     http = Net::HTTP.new(uri.host, uri.port)
     request = Net::HTTP::Post.new(uri.request_uri)
     request['Content-Type'] = 'application/json'
-    request['api-key'] = ENV['API_KEY']
+    request['api-key'] = api_key
     http.use_ssl = (uri.scheme == 'https')
     request.body = body.to_json
     puts "\nCreating your article draft ⚡⚡\n"
@@ -109,5 +128,3 @@ class DevFromCli
     puts "URL: #{response_json['url']}"
   end
 end
-
-DevFromCli.new.introduction
