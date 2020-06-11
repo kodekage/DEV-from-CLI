@@ -82,10 +82,10 @@ class DevFromCli
     articles = fetch_articles tag
     articles.each do |item|
       puts "\n******************************".blue
-      puts " #{'Title:'.yellow} #{item['title']}"
-      puts " #{'Author:'.yellow} #{item['user']['name']} | #{'Created:'.yellow} #{item['readable_publish_date']} | #{'Tags:'.yellow} #{item['tags']}"
-      puts " #{'Url:'.yellow} #{item['url']}"
-      puts " #{'Description:'.yellow} #{item['description']}"
+      puts "#{'Title:'.yellow} #{item['title']}"
+      puts "#{'Author:'.yellow} #{item['user']['name']} | #{'Created:'.yellow} #{item['readable_publish_date']} | #{'Tags:'.yellow} #{item['tags']}"
+      puts "#{'Url:'.yellow} #{item['url']}"
+      puts "#{'Description:'.yellow} #{item['description']}"
       puts '*******************************'.blue
       print "\nView more articles? [y/n] "
       input = STDIN.gets.chomp
