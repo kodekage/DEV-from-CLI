@@ -8,6 +8,14 @@ platform from the terminal.
 
 > This project was inspired by [Oh-My-DEV](https://github.com/OPARA-PROSPER/0.0.1-Oh-My-Dev) an Oh-My-Zsh plugin
 
+#### Usage
+Usage: `devfromcli <command>`
+
+Where \<command\> is either `start` or `help`
+
+devfromcli start    opens the interactive prompt
+devfromcli help     displays a help page
+
 #### DEMO
 
 [!Live Demo](https://www.youtube.com/watch?v=5Yj0VN5IdLw&t=128s)
