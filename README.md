@@ -13,8 +13,8 @@ Usage: `devfromcli <command>`
 
 Where \<command\> is either `start` or `help`
 
-devfromcli start    opens the interactive prompt
-devfromcli help     displays a help page
+- `$ devfromcli start`    opens the interactive prompt
+- `$ devfromcli help`     displays a help page
 
 #### DEMO
 
